@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+*{
+  font-family: "SF Pro Display";
+}
+
+@theme {
+    --color-primary: #367E34;
+    --color-bg-color: #E6F4E5;
+    --color-secondary: #F76D1B;
+    --color-success: #00C48C;
+    --color-error: #E63946;
+    --color-black: #212121;
+    --color-seven-five-black: #212121BF;
+    --color-five-zero-black: #21212180;
+    --color-two-five-black: #21212140;
+    --color-one-zero-black: #2121211A;
+    --color-zero-five-black: #2121211A;
+    --color-white: #fff;
+
+}
+
+.hover:hover{
+  background-color: #367e34;
+  color: white;
+  transition: all 0.8s;
+}
+
+@layer base{
+  h1{
+    @apply md:text-[40px] text-[24px] font-bold
+  }
+  p{
+    @apply md:text-[20] text-[14px]
+  }
+  h2{
+    @apply text-2xl md:text-3xl font-semibold max-w-3xl
+  }
+  h3{
+    @apply md:text-[20px] text-xl font-semibold
+  }
+}
+
+@layer components{
+    .btn{
+        @apply py-3.5 px-6 rounded-xl
+    }
+    .regular{
+      @apply md:text-[12px] text-[10px] font-normal
+    }
+    .tittle{
+      @apply bg-one-zero-black rounded-4xl w-fit p-2.5
+    }
+}
+
+@utility padding{
+    @apply px-[8%]
+}
+@utility margin{
+    @apply mt-23.5
+}
+
+.nav-link {
+  @apply text-black hover:text-primary transition-colors duration-200;
+}
+
+.dropdown-link {
+  @apply hover:text-primary transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply bg-primary text-white md:px-6 px-3 py-2.5 rounded-md hover:bg-green-600 transition-colors duration-200;
+}
+.btn-secondary {
+  @apply text-primary border border-primary md:px-6 px-3 py-2.5 rounded-md hover:bg-green-600 transition-colors duration-200;
+}
+
+.mobile-link {
+  @apply block text-lg text-black hover:text-primary transition-colors duration-200;
+}
+
+.mobile-sub-link {
+  @apply text-black hover:text-primary transition-colors duration-200;
+}
+
+.mobile-outline-btn {
+  @apply block text-center py-3 text-lg border-2 border-primary rounded-md text-primary;
+}
+
+.mobile-primary-btn {
+  @apply block bg-primary text-white text-center py-3 mt-4 rounded-md hover:bg-green-600;
+}
+
+.mobile-details summary {
+  @apply list-none;
+}
